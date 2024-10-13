@@ -1,5 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 *, *::after, *::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+:root {
+  --primary-color: #6BC0BC;
+  --secondary-color: #3799A6;
+  --body-text-color: #444444;
+  --menu-text-color: #333333;
+  --bg-color: #F8F9FA;
+  --h1-color: #333333;
+  --h2-color: #3799A6;
+  --h3-color: #6BC0BC;
+  
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+
+  --fw-100: 100;
+  --fw-200: 200;
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+  --fw-900: 900;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+body, p, a {
+  font-family: var(--body-font);
+  color: var(--body-text-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(235, 235, 235);
 }

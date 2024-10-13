@@ -1,0 +1,117 @@
+"use client";
+
+import styles from "@/components/header/header.module.css";
+import logo from "@/assets/fm-logo.svg";
+import igLogo from "@/assets/ig-logo.svg";
+import emailIcon from "@/assets/envelope.svg";
+import phoneIcon from "@/assets/phone.svg";
+
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { AnimatePresence, easeInOut, motion } from "framer-motion";
+
+export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function handleScroll() {
+    if (window.scrollY > 200) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  }
+
+  function handleMenuOpen() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const cssHeaderClasses = isScrolled
+    ? `${styles.header} ${styles["header-scrolled"]}`
+    : styles.header;
+
+  const cssHamburgerClasses = isMenuOpen
+    ? `${styles.hamburger} ${styles.active}`
+    : styles.hamburger;
+
+  return (
+    <header className={cssHeaderClasses}>
+      <div className={`container ${styles["header-container"]}`}>
+        <Link href="/">
+          <Image
+            src={logo}
+            className={styles["header-logo"]}
+            alt="FM WEB AGENCY LOGO"
+          ></Image>
+        </Link>
+        <nav className={styles["header-nav"]}>
+          <a href="/services">Servizi</a>
+          <a href="/portfolio">Portfolio</a>
+          <a href="/about">Chi siamo</a>
+          <a href="/contacts">Contatti</a>
+        </nav>
+        <div className={cssHamburgerClasses} onClick={handleMenuOpen}>
+          <div className={styles["hamburger-line"]}></div>
+          <div className={styles["hamburger-line"]}></div>
+          <div className={styles["hamburger-line"]}></div>
+        </div>
+      </div>
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, translateX: 100 }}
+            animate={{ opacity: 1, translateX: 0 }}
+            exit={{ opacity: 0, translateX: 100 }}
+            transition={{ duration: .5 }}
+            className={styles.overlay}
+          >
+            <motion.nav
+              initial={{ opacity: 0, translateX: 100 }}
+              animate={{ opacity: 1, translateX: 0 }}
+              exit={{ opacity: 0, translateX: 100 }}
+              transition={{ duration: .8, ease: "easeInOut" }}
+              className={styles["header-mobile-nav"]}
+            >
+              <Link href="/">
+                <Image
+                  src={logo}
+                  className={styles["header-mobile-logo"]}
+                  alt="FM WEB AGENCY LOGO"
+                ></Image>
+              </Link>
+              <div>
+                <a href="/services">Servizi</a>
+                <a href="/portfolio">Portfolio</a>
+                <a href="/about">Chi siamo</a>
+                <a href="/contacts">Contatti</a>
+              </div>
+              <div className={`${styles["header-mobile-social"]}`}>
+                <a
+                  href="https://www.instagram.com/fm.webagency"
+                  target="_blank"
+                >
+                  <Image src={igLogo} alt="PAGINA INSTAGRAM FM WEB AGENCY" />
+                </a>
+                <a href="mailto:francescomerighi61@gmail.com">
+                  <Image src={emailIcon} alt="EMAIL FM WEB AGENCY" />
+                </a>
+                <a href="tel:3426476626">
+                  <Image src={phoneIcon} alt="TELEFONO FM WEB AGENCY" />
+                </a>
+              </div>
+            </motion.nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
+  );
+}
