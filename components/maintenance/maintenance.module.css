@@ -1,0 +1,44 @@
+.maintenance-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 3rem;
+    padding-inline: .75rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+}
+
+.maintenance-section img {
+    max-width: 250px;
+    animation: rotate 3s linear infinite;
+    width: clamp(3.75rem, 3.518rem + 0.952vw, 4.375rem);
+    height: clamp(3.75rem, 3.518rem + 0.952vw, 4.375rem);
+}
+
+.maintenance-section h1 {
+    font-size: 32px;
+    color: var(--h1-color);
+    font-weight: var(--fw-700);
+    text-align: center;
+}
+
+.maintenance-section p {
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
+    color: var(--body-text-color);
+    font-weight: var(--fw-400);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
