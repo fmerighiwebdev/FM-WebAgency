@@ -5,8 +5,12 @@ import emailIcon from "@/assets/envelope.svg";
 import phoneIcon from "@/assets/phone.svg";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
+
+  const year = new Date().getFullYear();
+
   return (
     <footer className={styles.footer}>
       <div className="container">
@@ -41,7 +45,7 @@ export default function Footer() {
                 <a href="/contacts">Contatti</a>
               </li>
               <li>
-                <a href="/privacy-cookie-policy">Privacy & Cookie Policy</a>
+                <Link href="/privacy-cookie-policy">Privacy & Cookie Policy</Link>
               </li>
             </ul>
           </div>
@@ -61,7 +65,7 @@ export default function Footer() {
           Sviluppo, innovazione e strategia per un <span>successo online</span>{" "}
           senza limiti.
         </p>
-        <p className={styles["copy-text"]}>FM Web Agency © 2024</p>
+        <p className={styles["copy-text"]}>FM Web Agency © {year}</p>
       </div>
     </footer>
   );

@@ -10,10 +10,10 @@ import Maintenance from "@/components/maintenance/maintenance";
 export const metadata = {
   title: "FM Web Agency",
   description:
-    "Sviluppo, innovazione e strategia per un successo online senza limiti.",
+    "Accelera la crescita del tuo business con SOLUZIONI WEB SU MISURA che portano risultati concreti."
 };
 
-const isMaintenance = true;
+const isMaintenance = false;
 
 export default function RootLayout({ children }) {
   return (
