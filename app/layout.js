@@ -5,12 +5,15 @@ import Script from "next/script";
 import BootstrapClient from "../components/bootstrapclient";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
+import Maintenance from "@/components/maintenance/maintenance";
 
 export const metadata = {
   title: "FM Web Agency",
   description:
     "Sviluppo, innovazione e strategia per un successo online senza limiti.",
 };
+
+const isMaintenance = true;
 
 export default function RootLayout({ children }) {
   return (
@@ -36,10 +39,16 @@ export default function RootLayout({ children }) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
-        <BootstrapClient />
+        {isMaintenance ? (
+          <Maintenance />
+        ) : (
+          <>
+            <Header />
+            {children}
+            <Footer />
+            <BootstrapClient />
+          </>
+        )}
       </body>
     </html>
   );

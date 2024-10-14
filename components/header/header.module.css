@@ -159,8 +159,17 @@
         font-weight: 500;
         color: var(--menu-text-color);
         text-decoration: none;
-        transition: color .3s;
+        transition: all .3s;
         text-align: center;
+        text-transform: uppercase;
+        display: block;
+        opacity: 0;
+        border-radius: 5px;
+        animation: fadeInFromRightBounce 1.5s ease-in-out forwards;
+    }
+
+    .header-mobile-nav a:active {
+        background-color: var(--primary-color);
     }
 
     .header-mobile-social {
@@ -172,5 +181,22 @@
     .header-mobile-social img {
         width: 35px;
         height: 35px;
+    }
+}
+
+@keyframes fadeInFromRightBounce {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateX(-40%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
     }
 }

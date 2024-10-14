@@ -9,7 +9,7 @@ import phoneIcon from "@/assets/phone.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { AnimatePresence, easeInOut, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -54,10 +54,10 @@ export default function Header() {
           ></Image>
         </Link>
         <nav className={styles["header-nav"]}>
-          <a href="/services">Servizi</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/about">Chi siamo</a>
-          <a href="/contacts">Contatti</a>
+          <Link href="/services">Servizi</Link>
+          <Link href="/portfolio">Portfolio</Link>
+          <Link href="/about">Chi siamo</Link>
+          <Link href="/contacts">Contatti</Link>
         </nav>
         <div className={cssHamburgerClasses} onClick={handleMenuOpen}>
           <div className={styles["hamburger-line"]}></div>
@@ -71,14 +71,14 @@ export default function Header() {
             initial={{ opacity: 0, translateX: 100 }}
             animate={{ opacity: 1, translateX: 0 }}
             exit={{ opacity: 0, translateX: 100 }}
-            transition={{ duration: .5 }}
+            transition={{ duration: 0.5 }}
             className={styles.overlay}
           >
             <motion.nav
               initial={{ opacity: 0, translateX: 100 }}
               animate={{ opacity: 1, translateX: 0 }}
               exit={{ opacity: 0, translateX: 100 }}
-              transition={{ duration: .8, ease: "easeInOut" }}
+              transition={{ duration: 0.8, ease: "easeInOut" }}
               className={styles["header-mobile-nav"]}
             >
               <Link href="/">
@@ -89,10 +89,10 @@ export default function Header() {
                 ></Image>
               </Link>
               <div>
-                <a href="/services">Servizi</a>
-                <a href="/portfolio">Portfolio</a>
-                <a href="/about">Chi siamo</a>
-                <a href="/contacts">Contatti</a>
+                <Link href="/services">Servizi</Link>
+                <Link href="/portfolio">Portfolio</Link>
+                <Link href="/about">Chi siamo</Link>
+                <Link href="/contacts">Contatti</Link>
               </div>
               <div className={`${styles["header-mobile-social"]}`}>
                 <a

@@ -1,3 +1,4 @@
+/* HERO SECTION */
 .hero-section {
     background-image: url("../assets/website-bg_4x.webp");
     background-size: cover;
@@ -8,4 +9,26 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    gap: 3rem;
+    padding-inline: .75rem;
+}
+
+.hero-title {
+    font-size: clamp(3.75rem, 3.471rem + 1.143vw, 4.5rem);
+    color: var(--h1-color);
+    font-weight: var(--fw-700);
+    text-align: center;
+}
+
+.hero-description {
+    font-size: clamp(1.125rem, 1.079rem + 0.19vw, 1.25rem);
+    color: var(--body-text-color);
+    font-weight: var(--fw-400);
+    text-align: center;
+}
+
+.hero-description span {
+    color: var(--primary-color);
+    font-weight: var(--fw-700);
+    font-size: clamp(1.25rem, 1.157rem + 0.381vw, 1.5rem);
 }
