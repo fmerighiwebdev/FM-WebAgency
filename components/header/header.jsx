@@ -67,13 +67,6 @@ export default function Header() {
       </div>
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, translateX: 100 }}
-            animate={{ opacity: 1, translateX: 0 }}
-            exit={{ opacity: 0, translateX: 100 }}
-            transition={{ duration: 0.5 }}
-            className={styles.overlay}
-          >
             <motion.nav
               initial={{ opacity: 0, translateX: 100 }}
               animate={{ opacity: 1, translateX: 0 }}
@@ -109,7 +102,6 @@ export default function Header() {
                 </a>
               </div>
             </motion.nav>
-          </motion.div>
         )}
       </AnimatePresence>
     </header>

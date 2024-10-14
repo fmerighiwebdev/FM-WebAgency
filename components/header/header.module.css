@@ -124,15 +124,17 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         background-color: rgba(107, 192, 188, 0.2);
         transition: all .3s;
-        animation: fadeInFromRight .9s ease-in-out forwards;
     }
 
     .header-mobile-nav {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -140,7 +142,6 @@
         padding-block: 5rem;
         gap: 3rem;
         background-color: white;
-        animation: fadeInFromRight 1s ease-in-out forwards;
     }
 
     .header-mobile-logo {
