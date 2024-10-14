@@ -13,7 +13,7 @@ export const metadata = {
     "Sviluppo, innovazione e strategia per un successo online senza limiti.",
 };
 
-const isMaintenance = false;
+const isMaintenance = true;
 
 export default function RootLayout({ children }) {
   return (
