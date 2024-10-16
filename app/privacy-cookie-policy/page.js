@@ -1,11 +1,9 @@
 import styles from "./privacy.module.css";
 
-import Image from "next/image";
-
 export default function PrivacyCookiePolicyPage() {
   return (
     <main className={styles["privacy-page"]}>
-      <div class="container">
+      <div className="container">
         <section className={styles["privacy-header"]}>
           <h1>Privacy e Cookie Policy</h1>
           <p>

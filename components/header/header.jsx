@@ -16,7 +16,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleScroll() {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 100) {
       setIsScrolled(true);
     } else {
       setIsScrolled(false);

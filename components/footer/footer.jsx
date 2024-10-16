@@ -18,14 +18,10 @@ export default function Footer() {
           <div className={`col ${styles["footer-info"]}`}>
             <Image src={logo} alt="FM WEB AGENCY LOGO" />
             <div>
-              <p>
-                <span>FM WEB AGENCY</span>
-              </p>
-              <p>di Francesco Merighi</p>
               <p>Via III Novembre, 6</p>
               <p>Nogaredo (TN)</p>
               <p>
-                <strong>P.IVA: IT02721170229</strong>
+                <strong>P.IVA: 02721170229</strong>
               </p>
             </div>
           </div>

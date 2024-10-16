@@ -1,18 +1,22 @@
 .privacy-page {
-    padding: 12rem 0 4.5rem 0;
+    padding: 11rem 0 4.5rem 0;
     animation: fadeInFromBottom .75s ease-in-out forwards;
 }
 
 .privacy-header h1 {
     text-align: center;
-    font-size: clamp(2.5rem, 2.318rem + 0.762vw, 3rem);
+    font-size: clamp(2rem, 1.629rem + 1.524vw, 3rem);
     font-weight: var(--fw-600);
     margin-bottom: 3rem;
 }
 
 .privacy-page h2 {
     margin-bottom: 1rem;
-    font-size: clamp(1.5rem, 1.394rem + 0.381vw, 1.75rem);
+    font-size: clamp(1.25rem, 1.064rem + 0.762vw, 1.75rem);
+}
+
+.privacy-page p {
+    font-size: clamp(0.875rem, 0.829rem + 0.19vw, 1rem);
 }
 
 .privacy-header, .privacy-content {
@@ -28,6 +32,15 @@
     color: var(--primary-color);
     font-weight: var(--fw-500);
     text-decoration: none;
+}
+
+.privacy-content ul {
+    list-style-type: disc;
+    font-size: clamp(0.938rem, 0.914rem + 0.095vw, 1rem);
+}
+
+.privacy-content ul li::marker {
+    color: var(--primary-color);
 }
 
 @keyframes fadeInFromBottom {
