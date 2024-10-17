@@ -57,7 +57,7 @@ export default function Header() {
           <Link href="/services">Servizi</Link>
           <Link href="/portfolio">Portfolio</Link>
           <Link href="/about">Chi siamo</Link>
-          <Link href="/contacts">Contatti</Link>
+          <Link href="/contatti">Contatti</Link>
         </nav>
         <div className={cssHamburgerClasses} onClick={handleMenuOpen}>
           <div className={styles["hamburger-line"]}></div>
@@ -82,10 +82,10 @@ export default function Header() {
                 ></Image>
               </Link>
               <div>
-                <Link href="/services">Servizi</Link>
-                <Link href="/portfolio">Portfolio</Link>
-                <Link href="/about">Chi siamo</Link>
-                <Link href="/contacts">Contatti</Link>
+                <Link href="/services" onClick={handleMenuOpen}>Servizi</Link>
+                <Link href="/portfolio" onClick={handleMenuOpen}>Portfolio</Link>
+                <Link href="/about" onClick={handleMenuOpen}>Chi siamo</Link>
+                <Link href="/contatti" onClick={handleMenuOpen}>Contatti</Link>
               </div>
               <div className={`${styles["header-mobile-social"]}`}>
                 <a

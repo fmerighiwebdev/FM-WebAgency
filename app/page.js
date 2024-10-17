@@ -46,7 +46,7 @@ export default function Home() {
             className={`row g-5 align-items-center ${styles["services-columns"]}`}
           >
             <div className={`col-12 col-lg-6 ${styles["services-col"]}`}>
-              <div class={styles["services-header"]}>
+              <div className={styles["services-header"]}>
                 <h2>I NOSTRI SERVIZI</h2>
                 <p className="text-highlight">
                   Siamo qui per accompagnarti in ogni fase del tuo percorso
