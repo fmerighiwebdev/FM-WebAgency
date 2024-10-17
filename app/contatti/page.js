@@ -15,7 +15,7 @@ export default function ContactsPage() {
                     <p className={styles["contacts-section-text"]}>
                         Compila il seguente modulo o contattaci 
                         direttamente via email o telefono, e ti risponderemo il prima possibile. 
-                        Non vediamo l'ora di lavorare insieme!
+                        Non vediamo l&apos;ora di lavorare insieme!
                     </p>
                 </div>
                 <div className={`col-12 col-lg-6 d-flex justify-content-center ${styles["contacts-form-container"]}`}>
