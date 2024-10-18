@@ -14,7 +14,7 @@ export const metadata = {
     "Accelera la crescita del tuo business con SOLUZIONI WEB SU MISURA che portano risultati concreti."
 };
 
-const isMaintenance = true;
+const isMaintenance = false;
 
 export default function RootLayout({ children }) {
   return (
