@@ -48,10 +48,6 @@ export async function GET(request) {
   const API_KEY = process.env.PSI_API_KEY;
 
   try {
-    if (!API_KEY) {
-      throw new Error("API key not found.");
-    }
-
     const response = await axios.get(
       `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${API_KEY}&category=performance&category=seo&category=best-practices&category=accessibility`
     );

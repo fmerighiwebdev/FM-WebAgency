@@ -11,15 +11,27 @@ export default function AnalysisPage() {
   const url = searchParams.get("url");
 
   const [analysis, setAnalysis] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (url) {
       async function fetchAnalysis() {
         try {
+          setLoading(true);
           const response = await axios.get(`/api/analysis?url=${url}`);
           console.log(response.data);
+
+          if (response.data.status === "error") {
+            setError(response.data.message);
+            setLoading(false);
+            return;
+          }
+
           setAnalysis(response.data);
+          setLoading(false);
         } catch (err) {
+          setLoading(false);
           console.error(err);
         }
       }
@@ -33,8 +45,7 @@ export default function AnalysisPage() {
   if (analysis) {
     performanceScore =
       analysis.results.lighthouseResult.categories.performance.score * 100;
-    seoScore =
-      analysis.results.lighthouseResult.categories.seo.score * 100;
+    seoScore = analysis.results.lighthouseResult.categories.seo.score * 100;
     bestPracticesScore =
       analysis.results.lighthouseResult.categories["best-practices"].score *
       100;
@@ -75,7 +86,7 @@ export default function AnalysisPage() {
           <h2>{url}</h2>
         </div>
         <div className={styles["analysis-content"]}>
-          {analysis ? (
+          {analysis && (
             <div className={styles["analysis-results"]}>
               <div className={styles["analysis-results-grid"]}>
                 <div className={styles["lighthouse-card"]}>
@@ -125,9 +136,10 @@ export default function AnalysisPage() {
                 </div>
               </div>
             </div>
-          ) : (
-            <div class="loading-spinner">
-              <div class="lds-roller">
+          )}
+          {loading && (
+            <div className="loading-spinner">
+              <div className="lds-roller">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -139,6 +151,7 @@ export default function AnalysisPage() {
               </div>
             </div>
           )}
+          {error && <p className="error-message">{error} <br></br> Indirizzo URL non trovato.</p>}
         </div>
       </section>
     </main>
