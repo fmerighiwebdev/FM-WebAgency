@@ -168,6 +168,33 @@
     margin: 0;
 }
 
+/* ANALISI SITO WEB */
+.analysis-home-section {
+    padding-block: 6rem;
+}
+
+.analysis-home-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.analysis-home-section h2 {
+    font-size: clamp(2.25rem, 1.971rem + 1.143vw, 3rem);
+    color: var(--h2-color);
+    font-weight: var(--fw-700);
+    margin: 0;
+    text-align: center;
+}
+
+.analysis-home-section .analysis-home-description {
+    font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
+    color: var(--body-text-color);
+    font-weight: var(--fw-400);
+    text-align: center;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .hero-section {
         min-height: 90vh;

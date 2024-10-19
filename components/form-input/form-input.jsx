@@ -1,4 +1,4 @@
-import styles from "../contact-form/contact-form.module.css";
+import styles from "../form/form.module.css";
 
 import { forwardRef } from "react";
 

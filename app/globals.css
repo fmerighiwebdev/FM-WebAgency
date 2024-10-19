@@ -1,23 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --primary-color: #6BC0BC;
-  --secondary-color: #3799A6;
+  --primary-color: #6bc0bc;
+  --secondary-color: #3799a6;
   --body-text-color: #444444;
   --menu-text-color: #333333;
-  --bg-color: #F8F9FA;
+  --bg-color: #f8f9fa;
   --h1-color: #333333;
-  --h2-color: #3799A6;
-  --h3-color: #6BC0BC;
-  
-  --heading-font: 'Montserrat', sans-serif;
-  --body-font: 'Montserrat', sans-serif;
+  --h2-color: #3799a6;
+  --h3-color: #6bc0bc;
+
+  --heading-font: "Montserrat", sans-serif;
+  --body-font: "Montserrat", sans-serif;
 
   --fw-100: 100;
   --fw-200: 200;
@@ -34,7 +36,12 @@ html {
   scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
 }
 
@@ -56,7 +63,13 @@ h3 {
   font-weight: var(--fw-600);
 }
 
-body, p, a, li, label, input {
+body,
+p,
+a,
+li,
+label,
+input,
+button {
   font-family: var(--body-font);
   color: var(--body-text-color);
 }
@@ -77,7 +90,7 @@ body, p, a, li, label, input {
   color: red;
   text-align: center;
   background-color: rgba(255, 0, 0, 0.1);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
@@ -85,7 +98,7 @@ body, p, a, li, label, input {
   color: green;
   text-align: center;
   background-color: rgba(0, 255, 0, 0.1);
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 5px;
 }
 
@@ -99,4 +112,100 @@ body, p, a, li, label, input {
 
 ::-webkit-scrollbar-track {
   background-color: rgb(235, 235, 235);
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+  box-sizing: border-box;
+}
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7.2px;
+  height: 7.2px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  margin: -3.6px 0 0 -3.6px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 62.62742px;
+  left: 62.62742px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 67.71281px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 70.90963px;
+  left: 48.28221px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 70.90963px;
+  left: 31.71779px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 67.71281px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 62.62742px;
+  left: 17.37258px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12.28719px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

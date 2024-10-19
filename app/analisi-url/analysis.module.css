@@ -1,0 +1,70 @@
+.analysis-page {
+    padding: 11rem 0 5rem 0;
+}
+
+.analysis-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.analysis-header h1 {
+    font-size: clamp(2.25rem, 1.971rem + 1.143vw, 3rem);
+    color: var(--h2-color);
+    font-weight: var(--fw-700);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.analysis-header h2 {
+    font-size: clamp(1.25rem, 1.157rem + 0.381vw, 1.5rem);
+    color: grey;
+    font-weight: var(--fw-400);
+    margin: 0;
+}
+
+.analysis-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.lighthouse-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: all .3s;
+}
+
+.lighthouse-card .score {
+    font-size: clamp(1.5rem, 1.394rem + 0.381vw, 1.75rem);
+    color: var(--h2-color);
+    font-weight: var(--fw-700);
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.score.good {
+    color: green;
+    background-color: rgba(0, 255, 0, 0.1);
+}
+
+.score.ok {
+    color: orange;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+.score.bad {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.1);
+}

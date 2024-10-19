@@ -1,6 +1,5 @@
-import Link from "next/link";
 import styles from "./contacts.module.css";
-import ContactForm from "@/components/contact-form/contact-form";
+import Form from "@/components/form/form";
 
 export default function ContactsPage() {
     return (
@@ -19,7 +18,7 @@ export default function ContactsPage() {
                     </p>
                 </div>
                 <div className={`col-12 col-lg-6 d-flex justify-content-center ${styles["contacts-form-container"]}`}>
-                    <ContactForm />
+                    <Form />
                 </div>
             </div>
             </section>

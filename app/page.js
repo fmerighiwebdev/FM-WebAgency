@@ -9,6 +9,7 @@ import rightArrow from "@/assets/right-arrow.svg";
 
 import Link from "next/link";
 import Image from "next/image";
+import Form from "@/components/form/form";
 
 export default function Home() {
   return (
@@ -57,16 +58,17 @@ export default function Home() {
                 Dedichiamo tempo per ascoltare le tue esigenze e creare
                 soluzioni <em>su misura</em> per la tua azienda. Che tu abbia
                 bisogno di un{" "}
-                <span className="span-highlight">sito web professionale</span>, una{" "}
-                <span className="span-highlight">web app intuitiva</span> o di
-                migliorare la tua visibilità con{" "}
+                <span className="span-highlight">sito web professionale</span>,
+                una <span className="span-highlight">web app intuitiva</span> o
+                di migliorare la tua visibilità con{" "}
                 <span className="span-highlight">
                   strategie di digital marketing
                 </span>
                 , siamo pronti a darti gli strumenti giusti per crescere.
               </p>
               <Link href="/services" className={styles["section-link"]}>
-                Scopri i nostri servizi <Image src={rightArrow} alt="Right Arrow" />
+                Scopri i nostri servizi{" "}
+                <Image src={rightArrow} alt="Right Arrow" />
               </Link>
             </div>
             <div className={`col-12 col-lg-6 ${styles["services-col"]}`}>
@@ -121,8 +123,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles["about-us-home-section"]}>
-
+      <section className={styles["analysis-home-section"]}>
+        <div className={`${styles["analysis-home-container"]} container`}>
+          <div className="analysis-home-header">
+            <h2>ANALISI SITO WEB</h2>
+            <p className="text-highlight text-center">
+              Ottieni una valutazione immediata delle performance del tuo sito
+              web.
+            </p>
+          </div>
+          <p className={styles["analysis-home-description"]}>
+            In pochi secondi, grazie alla nostra analisi <span className="span-highlight">
+              gratuita e
+              professionale
+            </span>, ti forniremo un report dettagliato, indicandoti tutte
+            le problematiche e le criticità che potrebbero allontanare i
+            visitatori facendoti perdere potenziali clienti.
+          </p>
+          <Form type="analysis" />
+        </div>
       </section>
     </main>
   );
