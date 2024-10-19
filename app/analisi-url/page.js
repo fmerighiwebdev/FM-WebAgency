@@ -96,7 +96,7 @@ export default function AnalysisPage() {
                       .score * 100}
                   </p>
                   <p>
-                    Indica la velocità di caricamento del sito e l'efficienza
+                    Indica la velocità di caricamento del sito e l&apos;efficienza
                     complessiva.
                   </p>
                 </div>
@@ -119,7 +119,7 @@ export default function AnalysisPage() {
                     ].score * 100}
                   </p>
                   <p>
-                    Rappresenta l'adesione agli standard di sviluppo web e
+                    Rappresenta l&apos;adesione agli standard di sviluppo web e
                     sicurezza.
                   </p>
                 </div>
