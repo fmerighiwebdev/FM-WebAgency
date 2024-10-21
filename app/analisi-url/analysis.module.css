@@ -22,11 +22,16 @@
     margin: 0;
 }
 
+.analysis-results {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 .analysis-results-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 5rem;
 }
 
 .lighthouse-card {
@@ -41,7 +46,11 @@
     transition: all .3s;
 }
 
-.lighthouse-card .score {
+.lighthouse-card p {
+    margin: 0;
+}
+
+.score {
     font-size: clamp(1.5rem, 1.394rem + 0.381vw, 1.75rem);
     color: var(--h2-color);
     font-weight: var(--fw-700);
@@ -54,17 +63,74 @@
     border-radius: 50%;
 }
 
-.score.good {
+.good {
     color: green;
     background-color: rgba(0, 255, 0, 0.1);
 }
 
-.score.ok {
+.ok {
     color: orange;
     background-color: rgba(255, 165, 0, 0.1);
 }
 
-.score.bad {
+.bad {
     color: red;
     background-color: rgba(255, 0, 0, 0.1);
+}
+
+.avg-score, .analysis-cta {
+    width: min(600px, 100%);
+    margin: 0 auto;
+}
+
+.avg-score-title {
+    font-size: clamp(1.25rem, 1.134rem + 0.476vw, 1.563rem);
+    text-align: center;
+    font-weight: var(--fw-700);
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.avg-score-description {
+    font-size: clamp(1rem, 0.894rem + 0.238vw, 1.125rem);
+    text-align: center;
+    font-weight: var(--fw-400);
+    margin: 0;
+}
+
+.analysis-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.analysis-cta.warning {
+    background-color: rgba(255, 165, 0, 0.1);
+}
+
+.analysis-cta.danger {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.analysis-cta a {
+    padding: 1rem 2rem;
+    font-size: clamp(1rem, 0.894rem + 0.238vw, 1.125rem);
+    text-align: center;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    transition: all .3s;
+}
+
+.analysis-cta a:hover {
+    background-color: var(--secondary-color);
 }
