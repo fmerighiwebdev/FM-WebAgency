@@ -28,7 +28,7 @@ export default function AnalysisPage() {
       }
 
     fetchAnalysis();
-  }, [url]);
+  }}, [url]);
 
   const lightHouseResults = analysis?.results.lighthouseResult;
 
@@ -36,14 +36,14 @@ export default function AnalysisPage() {
 
   if (analysis) {
     performanceScore =
-      analysis.results.lighthouseResult.categories.performance.score * 100;
+      Math.round(lightHouseResults.categories.performance.score * 100);
     seoScore =
-      analysis.results.lighthouseResult.categories.seo.score * 100;
+      Math.round(lightHouseResults.categories.seo.score * 100);
     bestPracticesScore =
-      analysis.results.lighthouseResult.categories["best-practices"].score *
-      100;
+      Math.round(lightHouseResults.categories["best-practices"].score *
+      100);
     accessibilityScore =
-      analysis.results.lighthouseResult.categories.accessibility.score * 100;
+      Math.round(lightHouseResults.categories.accessibility.score * 100);
   }
 
   const avgScore = Math.round(
@@ -83,7 +83,7 @@ export default function AnalysisPage() {
           <h2>{url}</h2>
         </div>
         <div className={styles["analysis-content"]}>
-          {analysis && (
+          {analysis ? (
             <div className={styles["analysis-results"]}>
               <div className={styles["analysis-results-grid"]}>
                 <div className={styles["lighthouse-card"]}>
@@ -220,8 +220,8 @@ export default function AnalysisPage() {
               )}
             </div>
           ) : (
-            <div class="loading-spinner">
-              <div class="lds-roller">
+            <div className="loading-spinner">
+              <div className="lds-roller">
                 <div></div>
                 <div></div>
                 <div></div>
