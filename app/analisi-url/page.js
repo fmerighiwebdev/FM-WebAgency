@@ -133,8 +133,8 @@ export default function AnalysisPage() {
                       </span>
                     </p>
                     <p className={styles["avg-score-description"]}>
-                      Gli utenti ottengono un'esperienza ottimale, il sito web è
-                      ben ottimizzato per le prestazioni, accessibile a un'ampia
+                      Gli utenti ottengono un&apos;esperienza ottimale, il sito web è
+                      ben ottimizzato per le prestazioni, accessibile a un&apos;ampia
                       gamma di utenti, sicuro e rilevabile dai motori di
                       ricerca.
                     </p>
@@ -150,7 +150,7 @@ export default function AnalysisPage() {
                     </p>
                     <p className={styles["avg-score-description"]}>
                       Il sito web funziona, ma potrebbe beneficiare di
-                      un'ulteriore ottimizzazione in uno o più ambiti.
+                      un&apos;ulteriore ottimizzazione in uno o più ambiti.
                     </p>
                   </div>
                 ) : (
@@ -164,7 +164,7 @@ export default function AnalysisPage() {
                     <p className={styles["avg-score-description"]}>
                       Il sito web è probabilmente lento, difficile da utilizzare per
                       alcuni tipi di pubblico e manca di importanti best
-                      practices per la sicurezza e/o l'accessibilità, richiedendo una
+                      practices per la sicurezza e/o l&apos;accessibilità, richiedendo una
                       strategia di ottimizzazione più completa.
                     </p>
                   </div>
@@ -175,7 +175,7 @@ export default function AnalysisPage() {
                   className={`${styles["analysis-cta"]} ${styles["warning"]}`}
                 >
                   <p>
-                    Hai appena eseguito un'analisi del tuo sito web e i
+                    Hai appena eseguito un&apos;analisi del tuo sito web e i
                     risultati non sono male, ma sai che potresti ottenere ancora
                     di più? 😊
                   </p>
@@ -184,7 +184,7 @@ export default function AnalysisPage() {
                     nostro team e ti mostreremo come possiamo aiutarti a
                     sviluppare un sito web che sia davvero il top in termini di
                     velocità, usabilità e visibilità. Non accontentarti di buoni
-                    risultati, punta all'eccellenza! 💪
+                    risultati, punta all&apos;eccellenza! 💪
                   </p>
                   <Link href="/contatti">
                     Richiedi una consulenza gratuita
@@ -196,7 +196,7 @@ export default function AnalysisPage() {
                   className={`${styles["analysis-cta"]} ${styles["danger"]}`}
                 >
                   <p>
-                    L'analisi del tuo sito web ha rilevato alcuni problemi
+                    L&apos;analisi del tuo sito web ha rilevato alcuni problemi
                     importanti: con un punteggio sotto i 70, il sito non sta
                     performando come dovrebbe. Ma non preoccuparti, siamo qui
                     per aiutarti! 😉
@@ -208,9 +208,9 @@ export default function AnalysisPage() {
                     </strong>{" "}
                     Prenota una consulenza gratuita e insieme valuteremo come
                     migliorare drasticamente le prestazioni andando a sviluppare
-                    un sito web che si carica in un batter d'occhio,
+                    un sito web che si carica in un batter d&apos;occhio,
                     perfettamente ottimizzato per i motori di ricerca e che
-                    offra un'esperienza fluida e accessibile a tutti i tuoi
+                    offra un&apos;esperienza fluida e accessibile a tutti i tuoi
                     utenti. 💪
                   </p>
                   <Link href="/contatti">
