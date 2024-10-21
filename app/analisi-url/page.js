@@ -12,17 +12,20 @@ export default function AnalysisPage() {
   const url = searchParams.get("url");
 
   const [analysis, setAnalysis] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    async function fetchAnalysis() {
-      try {
-        const response = await axios.get(`/api/analysis?url=${url}`);
-        console.log(response.data);
-        setAnalysis(response.data);
-      } catch (err) {
-        console.error(err);
+    if (url) {
+      async function fetchAnalysis() {
+        try {
+          const response = await axios.get(`/api/analysis?url=${url}`);
+          console.log(response.data);
+          setAnalysis(response.data);
+        } catch (err) {
+          console.error(err);
+        }
       }
-    }
 
     fetchAnalysis();
   }, [url]);
@@ -31,17 +34,16 @@ export default function AnalysisPage() {
 
   let performanceScore, seoScore, bestPracticesScore, accessibilityScore;
 
-  if (lightHouseResults) {
-    performanceScore = Math.round(
-      lightHouseResults.categories.performance.score * 100
-    );
-    seoScore = Math.round(lightHouseResults.categories.seo.score * 100);
-    bestPracticesScore = Math.round(
-      lightHouseResults.categories["best-practices"].score * 100
-    );
-    accessibilityScore = Math.round(
-      lightHouseResults.categories.accessibility.score * 100
-    );
+  if (analysis) {
+    performanceScore =
+      analysis.results.lighthouseResult.categories.performance.score * 100;
+    seoScore =
+      analysis.results.lighthouseResult.categories.seo.score * 100;
+    bestPracticesScore =
+      analysis.results.lighthouseResult.categories["best-practices"].score *
+      100;
+    accessibilityScore =
+      analysis.results.lighthouseResult.categories.accessibility.score * 100;
   }
 
   const avgScore = Math.round(
@@ -81,14 +83,14 @@ export default function AnalysisPage() {
           <h2>{url}</h2>
         </div>
         <div className={styles["analysis-content"]}>
-          {analysis ? (
+          {analysis && (
             <div className={styles["analysis-results"]}>
               <div className={styles["analysis-results-grid"]}>
                 <div className={styles["lighthouse-card"]}>
                   <h3>Performance</h3>
                   <p className={cssPerformanceClasses}>{performanceScore}</p>
                   <p>
-                    Indica la velocità di caricamento del sito e l'efficienza
+                    Indica la velocità di caricamento del sito e l&apos;efficienza
                     complessiva.
                   </p>
                 </div>
@@ -106,7 +108,7 @@ export default function AnalysisPage() {
                     {bestPracticesScore}
                   </p>
                   <p>
-                    Rappresenta l'adesione agli standard di sviluppo web e
+                    Rappresenta l&apos;adesione agli standard di sviluppo web e
                     sicurezza.
                   </p>
                 </div>
@@ -218,8 +220,8 @@ export default function AnalysisPage() {
               )}
             </div>
           ) : (
-            <div className="loading-spinner">
-              <div className="lds-roller">
+            <div class="loading-spinner">
+              <div class="lds-roller">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -231,6 +233,7 @@ export default function AnalysisPage() {
               </div>
             </div>
           )}
+          {error && <p className="error-message">{error} <br></br> Indirizzo URL non trovato.</p>}
         </div>
       </section>
     </main>

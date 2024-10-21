@@ -41,12 +41,14 @@ export default function Form({ type }) {
 
       if (response.data.status === "error") {
         setError(response.data.message);
+        setIsSending(false);
+        return;
       }
 
-      if (response.data.status === "success") {
-        setError(null);
-        router.push(`/analisi-url/?url=${encodeURIComponent(formData.websiteURL)}`);
-      }
+      setError(null);
+      router.push(
+        `/analisi-url/?url=${encodeURIComponent(formData.websiteURL)}`
+      );
 
       setIsSending(false);
     } catch (err) {
@@ -106,7 +108,7 @@ export default function Form({ type }) {
           <FormInput type="text" name="company" ref={companyRef}>
             Azienda *
           </FormInput>
-          <FormInput type="text" name="website" ref={websiteURLRef}>
+          <FormInput type="text" name="website" placeholder="https://" ref={websiteURLRef}>
             URL Sito Web *
           </FormInput>
         </div>
@@ -168,7 +170,10 @@ export default function Form({ type }) {
       ) : (
         <button type="submit">
           {isSending ? (
-            <div className="spinner-grow spinner-grow-sm text-light" role="status">
+            <div
+              className="spinner-grow spinner-grow-sm text-light"
+              role="status"
+            >
               <span className="visually-hidden">Loading...</span>
             </div>
           ) : (
