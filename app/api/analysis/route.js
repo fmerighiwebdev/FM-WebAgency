@@ -54,7 +54,7 @@ export async function GET(request) {
 
     return NextResponse.json({ results: response.data, status: "success" });
   } catch (err) {
-    console.error(err);
+    console.error("Error fetching analysis data:", err);
     return NextResponse.json({
       message: "Si è verificato un errore. Riprova più tardi.",
       status: "error",
