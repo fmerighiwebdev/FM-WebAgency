@@ -35,6 +35,8 @@ export async function POST(request) {
   return NextResponse.json({ status: "success" });
 }
 
+export const maxDuration = 45;
+
 export async function GET(request) {
   const url = request.nextUrl.searchParams.get("url");
 
@@ -49,8 +51,7 @@ export async function GET(request) {
 
   try {
     const response = await axios.get(
-      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${API_KEY}&category=performance&category=seo&category=best-practices&category=accessibility`,
-      { timeout: 60000 }
+      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${API_KEY}&category=performance&category=seo&category=best-practices&category=accessibility`
     );
 
     return NextResponse.json({ results: response.data, status: "success" });
