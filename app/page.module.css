@@ -195,6 +195,40 @@
     margin: 0;
 }
 
+/* PARTNERS */
+.partners-home-section {
+    padding-block: 6rem;
+}
+
+.partners-home-section h2 {
+    font-size: clamp(2.25rem, 1.971rem + 1.143vw, 3rem);
+    color: var(--h2-color);
+    font-weight: var(--fw-700);
+    margin: 0 0 2rem 0;
+    text-align: center;
+}
+
+
+.partner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partner-card:first-child img {
+    width: clamp(9.375rem, 9.143rem + 0.952vw, 10rem);
+}
+
+.partner-card:last-child img {
+    width: 150px;
+}
+
+.partner-card img {
+    width: clamp(2.813rem, 2.464rem + 1.429vw, 3.75rem);
+    height: clamp(2.813rem, 2.464rem + 1.429vw, 3.75rem);
+    object-fit: contain;
+}
+
 /* NOT FOUND */
 .not-found-page {
     display: flex;

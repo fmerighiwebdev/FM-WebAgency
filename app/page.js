@@ -6,6 +6,10 @@ import appIcon from "@/assets/app.svg";
 import cartIcon from "@/assets/cart.svg";
 import upTrendIcon from "@/assets/up-trend.svg";
 import rightArrow from "@/assets/right-arrow.svg";
+import emergeLogo from "@/assets/logo-emergelabs.webp";
+import hostingerLogo from "@/assets/hostinger-logo.svg";
+import vercelLogo from "@/assets/logo-vercel.svg";
+import cookieLogo from "@/assets/cookieyes-logo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -125,7 +129,7 @@ export default function Home() {
 
       <section className={styles["analysis-home-section"]}>
         <div className={`${styles["analysis-home-container"]} container`}>
-          <div className="analysis-home-header">
+          <div>
             <h2>ANALISI SITO WEB</h2>
             <p className="text-highlight text-center">
               Ottieni una valutazione immediata delle performance del tuo sito
@@ -133,14 +137,49 @@ export default function Home() {
             </p>
           </div>
           <p className={styles["analysis-home-description"]}>
-            In pochi secondi, grazie alla nostra analisi <span className="span-highlight">
-              gratuita e
-              professionale
-            </span>, ti forniremo un report dettagliato, indicandoti tutte
-            le problematiche e le criticità che potrebbero allontanare i
-            visitatori facendoti perdere potenziali clienti.
+            In pochi secondi, grazie alla nostra analisi{" "}
+            <span className="span-highlight">gratuita e professionale</span>, ti
+            forniremo un report dettagliato, indicandoti tutte le problematiche
+            e le criticità che potrebbero allontanare i visitatori facendoti
+            perdere potenziali clienti.
           </p>
           <Form type="analysis" />
+        </div>
+      </section>
+
+      <section className={styles["partners-home-section"]}>
+        <div className="container">
+          <h2>I NOSTRI PARTNER</h2>
+          <div className={`${styles["partner-home-grid"]} row g-4 align-items-center`}>
+            <div
+              className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
+            >
+              <Link href="https://www.emergelabs.it">
+                <Image src={emergeLogo} alt="EmergeLabs Logo" />
+              </Link>
+            </div>
+            <div
+              className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
+            >
+              <Link href="https://www.hostinger.it/">
+                <Image src={hostingerLogo} alt="Hostinger Logo" />
+              </Link>
+            </div>
+            <div
+              className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
+            >
+              <Link href="https://vercel.com/">
+                <Image src={vercelLogo} alt="Vercel Logo" />
+              </Link>
+            </div>
+            <div
+              className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
+            >
+              <Link href="https://www.cookieyes.com/it/">
+                <Image src={cookieLogo} alt="CookieYes Logo" />
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>
