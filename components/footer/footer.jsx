@@ -35,7 +35,7 @@ export default function Footer() {
                 <a href="/portfolio">Portfolio</a>
               </li>
               <li>
-                <a href="/about">Chi siamo</a>
+                <a href="/chi-siamo">Chi siamo</a>
               </li>
               <li>
                 <Link href="/contatti">Contatti</Link>
