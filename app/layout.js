@@ -6,7 +6,6 @@ import BootstrapClient from "../components/bootstrapclient";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import Maintenance from "@/components/maintenance/maintenance";
-import AOSClient from "@/components/aosclient";
 
 export const metadata = {
   title: "FM Web Agency",
@@ -47,7 +46,6 @@ export default function RootLayout({ children }) {
             <Header />
             {children}
             <Footer />
-            <AOSClient />
             <BootstrapClient />
           </>
         )}

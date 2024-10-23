@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./privacy.module.css";
 
 export default function PrivacyCookiePolicyPage() {
@@ -7,14 +8,12 @@ export default function PrivacyCookiePolicyPage() {
         <section className={styles["privacy-header"]}>
           <h1>Privacy e Cookie Policy</h1>
           <p>
-            <em>Ultimo aggiornamento: 14/10/2024</em>
+            <em>Ultimo aggiornamento: 23/10/2024</em>
           </p>
           <p>
-            FM WEB AGENCY, titolare del trattamento dei dati, si impegna a
-            proteggere la privacy dei visitatori e degli utenti del sito
-            fmwebagency.it. La presente Privacy Policy descrive le modalità di
-            raccolta, utilizzo, condivisione e protezione dei dati personali e i
-            diritti degli utenti ai sensi del Regolamento UE 2016/679 (GDPR).
+            La presente Privacy Policy descrive le modalità di raccolta,
+            utilizzo, condivisione e protezione dei dati personali e i diritti
+            degli utenti ai sensi del Regolamento UE 2016/679 (GDPR).
           </p>
         </section>
         <section className={styles["privacy-content"]}>
@@ -43,9 +42,7 @@ export default function PrivacyCookiePolicyPage() {
         </section>
         <section className={styles["privacy-content"]}>
           <h2>Finalità del Trattamento</h2>
-          <p>
-            FM WEB AGENCY raccoglie e tratta i dati per le seguenti finalità:
-          </p>
+          <p>Vengono raccolti e trattati i dati per le seguenti finalità:</p>
           <ul>
             <li>
               Fornire i servizi richiesti dagli utenti, come la risposta a
@@ -63,8 +60,8 @@ export default function PrivacyCookiePolicyPage() {
         <section className={styles["privacy-content"]}>
           <h2>Base Giuridica del Trattamento</h2>
           <p>
-            Il trattamento dei dati da parte di FM WEB AGENCY si basa su una o
-            più delle seguenti basi giuridiche:
+            Il trattamento dei dati si basa su una o più delle seguenti basi
+            giuridiche:
           </p>
           <ul>
             <li>
@@ -80,10 +77,10 @@ export default function PrivacyCookiePolicyPage() {
         <section className={styles["privacy-content"]}>
           <h2>Condivisione dei Dati</h2>
           <p>
-            FM WEB AGENCY non condivide, vende o affitta i dati personali
-            raccolti a terze parti, a meno che ciò non sia necessario per
-            fornire i servizi richiesti dall&apos;utente o per ottemperare a
-            obblighi legali. I dati possono essere condivisi con:
+            I dati personali raccolti non verranno condivisi ne
+            venduti a terze parti, a meno che ciò non sia necessario per fornire
+            i servizi richiesti dall&apos;utente o per ottemperare a obblighi
+            legali. I dati possono essere condivisi con:
           </p>
           <ul>
             <li>
@@ -103,13 +100,13 @@ export default function PrivacyCookiePolicyPage() {
             I dati personali sono conservati per il tempo necessario a
             soddisfare le finalità per cui sono stati raccolti, salvo
             diversamente richiesto dalla legge. In generale, i dati raccolti per
-            finalità contrattuali o legali saranno conservati per 10 anni.
+            finalità contrattuali o legali saranno conservati per 1 anno.
           </p>
         </section>
         <section className={styles["privacy-content"]}>
           <h2>Sicurezza dei Dati</h2>
           <p>
-            FM WEB AGENCY adotta misure di sicurezza tecniche e organizzative
+            Vengono adottate misure di sicurezza tecniche e organizzative
             appropriate per proteggere i dati personali da accessi non
             autorizzati, perdita, distruzione o alterazione. Tuttavia, nessun
             sistema di trasmissione o archiviazione dati è sicuro al 100%, e non
@@ -141,11 +138,8 @@ export default function PrivacyCookiePolicyPage() {
             </li>
           </ul>
           <p>
-            Le richieste possono essere inviate all&apos;indirizzo email:{" "}
-            <a href="mailto:fmwebagencysolutions@gmail.com">
-              fmwebagencysolutions@gmail.com
-            </a>
-            .
+            Le richieste possono essere inviate attraverso il form alla seguente{" "}
+            <Link href="/contatti">pagina</Link>.
           </p>
         </section>
         <section className={styles["privacy-content"]}>
@@ -174,20 +168,19 @@ export default function PrivacyCookiePolicyPage() {
         <section className={styles["privacy-content"]}>
           <h2>Modifiche alla Privacy Policy</h2>
           <p>
-            FM WEB AGENCY si riserva il diritto di aggiornare la presente
-            Privacy Policy. Eventuali modifiche saranno comunicate agli utenti
-            tramite il sito web o via email, ove necessario.
+            Ci riserviamo il diritto di aggiornare la presente Privacy Policy.
+            Eventuali modifiche saranno comunicate agli utenti tramite il sito
+            web o via email, ove necessario.
           </p>
         </section>
         <section className={styles["privacy-content"]}>
           <h2>Contatti</h2>
           <p>
             Per domande o richieste relative alla presente Privacy e Cookie
-            Policy, è possibile contattare FM WEB AGENCY tramite email a{" "}
-            <a href="mailto:fmwebagencysolutions@gmail.com">
-              fmwebagencysolutions@gmail.com
-            </a>{" "}
-            o all&apos;indirizzo Via III Novembre, 6, Nogaredo (TN), 38060.
+            Policy, è possibile contattarci FM WEB AGENCY tramite email
+            compilando il form presente a questa{" "}
+            <Link href="/contatti">pagina</Link> o scrivendo
+            all&apos;indirizzo Via III Novembre, 6, Nogaredo (TN), 38060.
           </p>
         </section>
       </div>

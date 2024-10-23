@@ -24,6 +24,11 @@
     outline: none;
 }
 
+.analysis-form input::placeholder {
+    font-weight: var(--fw-300);
+    color: rgb(186, 186, 186);
+}
+
 .contacts-form button {
     width: 250px;
     margin: 0 auto;
