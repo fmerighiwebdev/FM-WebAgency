@@ -49,7 +49,8 @@ export async function GET(request) {
 
   try {
     const response = await axios.get(
-      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${API_KEY}&category=performance&category=seo&category=best-practices&category=accessibility`
+      `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${url}&key=${API_KEY}&category=performance&category=seo&category=best-practices&category=accessibility`,
+      { timeout: 60000 }
     );
 
     return NextResponse.json({ results: response.data, status: "success" });
