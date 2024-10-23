@@ -195,6 +195,16 @@
     margin: 0;
 }
 
+/* NOT FOUND */
+.not-found-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
     .hero-section {
         min-height: 90vh;
