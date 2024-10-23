@@ -29,7 +29,7 @@ export default function Footer() {
             <h4>Link Utili</h4>
             <ul>
               <li>
-                <a href="/services">Servizi</a>
+                <a href="/servizi">Servizi</a>
               </li>
               <li>
                 <a href="/portfolio">Portfolio</a>
