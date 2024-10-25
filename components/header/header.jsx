@@ -55,7 +55,7 @@ export default function Header() {
         </Link>
         <nav className={styles["header-nav"]}>
           <Link href="/servizi">Servizi</Link>
-          <Link href="/portfolio">Portfolio</Link>
+          <Link href="#portfolio">Portfolio</Link>
           <Link href="/chi-siamo">Chi siamo</Link>
           <Link href="/contatti">Contatti</Link>
         </nav>

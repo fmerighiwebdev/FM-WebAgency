@@ -10,10 +10,13 @@ import emergeLogo from "@/assets/logo-emergelabs.webp";
 import hostingerLogo from "@/assets/hostinger-logo.svg";
 import vercelLogo from "@/assets/logo-vercel.svg";
 import cookieLogo from "@/assets/cookieyes-logo.svg";
+import alTeatro from "@/assets/al-teatro.webp";
+import trePini from "@/assets/tre-pini.webp";
 
 import Link from "next/link";
 import Image from "next/image";
 import Form from "@/components/form/form";
+import Slideshow from "@/components/slideshow/slideshow";
 
 export default function Home() {
   return (
@@ -50,15 +53,15 @@ export default function Home() {
           <div
             className={`row g-5 align-items-center ${styles["services-columns"]}`}
           >
-            <div className={`col-12 col-lg-6 ${styles["services-col"]}`}>
-              <div className={styles["services-header"]}>
+            <div className={`col-12 col-lg-6 ${styles["section-left-col"]}`}>
+              <div className={styles["section-columns-header"]}>
                 <h2>I NOSTRI SERVIZI</h2>
                 <p className="text-highlight">
                   Siamo qui per accompagnarti in ogni fase del tuo percorso
                   digitale.
                 </p>
               </div>
-              <p className={styles["home-section-text"]}>
+              <p className={styles["section-text"]}>
                 Dedichiamo tempo per ascoltare le tue esigenze e creare
                 soluzioni <em>su misura</em> per la tua azienda. Che tu abbia
                 bisogno di un{" "}
@@ -147,10 +150,59 @@ export default function Home() {
         </div>
       </section>
 
+      <section className={styles["portfolio-home-section"]} id="portfolio">
+        <div className={`${styles["portfolio-container"]} container`}>
+          <div className="row align-items-center g-5">
+            <div className={`col-12 col-lg-6 ${styles["section-left-col"]}`}>
+              <div className={styles["section-columns-header"]}>
+                <h2>PROGETTI</h2>
+                <p className="text-highlight">
+                  Scopri i progetti che abbiamo realizzato per i nostri clienti.
+                </p>
+              </div>
+              <p className={styles["section-text"]}>
+                Ogni progetto è unico e personalizzato, realizzato con passione
+                e dedizione per garantire risultati concreti e soddisfare le
+                esigenze dei nostri clienti.
+              </p>
+              <Link href="/portfolio" className={styles["section-link"]}>
+                Scopri tutti i progetti{" "}
+                <Image src={rightArrow} alt="Right Arrow" />
+              </Link>
+            </div>
+            <div className="col-12 col-lg-6">
+              <Slideshow />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles["cta-home-section"]}>
+        <div className={`${styles["cta-container"]} container`}>
+          <h2>Pronto ad accelerare la crescita della tua attività online?</h2>
+          <Link href="/contatti" className={styles["cta-btn"]}>
+            Contattaci ora!
+          </Link>
+        </div>
+      </section>
+
       <section className={styles["partners-home-section"]}>
-        <div className="container">
-          <h2>I NOSTRI PARTNER</h2>
-          <div className={`${styles["partner-home-grid"]} row g-4 align-items-center`}>
+        <div className={`${styles["partners-container"]} container`}>
+          <div>
+            <h2>I NOSTRI PARTNER</h2>
+            <p className="text-highlight text-center">
+              I nostri partner rappresentano un valore aggiunto per il successo
+              dei nostri progetti.
+            </p>
+          </div>
+          <p className={styles["partners-home-description"]}>
+            Lavoriamo fianco a fianco con professionisti e aziende per offrire
+            soluzioni innovative e personalizzate, garantendo qualità e
+            affidabilità in ogni fase del percorso.
+          </p>
+          <div
+            className={`${styles["partner-home-grid"]} row g-4 align-items-center`}
+          >
             <div
               className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
             >
