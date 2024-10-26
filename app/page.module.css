@@ -286,7 +286,7 @@
     font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
     text-align: center;
     background-color: white;
-    padding: 1rem 2rem;
+    padding: clamp(0.5rem, 0.314rem + 0.762vw, 1rem) 2rem;
     border-radius: 10px;
     color: var(--primary-color);
     text-decoration: none;
@@ -342,6 +342,12 @@
 
 .not-found-page a:hover {
     background-color: var(--secondary-color);
+}
+
+@media (max-width: 992px) {
+    .section-columns {
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 768px) {

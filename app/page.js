@@ -28,7 +28,7 @@ export default function Home() {
           <span>SOLUZIONI WEB SU MISURA</span> <br></br>
           che portano risultati concreti.
         </p>
-        <Link href="#" className={styles["hero-btn"]}>
+        <Link href="#servizi" className={styles["hero-btn"]}>
           Scopri di più
         </Link>
         <Image
@@ -48,10 +48,10 @@ export default function Home() {
         /> */}
       </section>
 
-      <section className={styles["services-home-section"]}>
+      <section className={styles["services-home-section"]} id="servizi">
         <div className="container">
           <div
-            className={`row g-5 align-items-center ${styles["services-columns"]}`}
+            className={`row align-items-center ${styles["section-columns"]}`}
           >
             <div className={`col-12 col-lg-6 ${styles["section-left-col"]}`}>
               <div className={styles["section-columns-header"]}>
@@ -130,29 +130,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles["analysis-home-section"]}>
-        <div className={`${styles["analysis-home-container"]} container`}>
-          <div>
-            <h2>ANALISI SITO WEB</h2>
-            <p className="text-highlight text-center">
-              Ottieni una valutazione immediata delle performance del tuo sito
-              web.
-            </p>
-          </div>
-          <p className={styles["analysis-home-description"]}>
-            In pochi secondi, grazie alla nostra analisi{" "}
-            <span className="span-highlight">gratuita e professionale</span>, ti
-            forniremo un report dettagliato, indicandoti tutte le problematiche
-            e le criticità che potrebbero allontanare i visitatori facendoti
-            perdere potenziali clienti.
-          </p>
-          <Form type="analysis" />
-        </div>
-      </section>
-
       <section className={styles["portfolio-home-section"]} id="portfolio">
         <div className={`${styles["portfolio-container"]} container`}>
-          <div className="row align-items-center g-5">
+          <div
+            className={`row align-items-center ${styles["section-columns"]}`}
+          >
             <div className={`col-12 col-lg-6 ${styles["section-left-col"]}`}>
               <div className={styles["section-columns-header"]}>
                 <h2>PROGETTI</h2>
@@ -183,6 +165,26 @@ export default function Home() {
           <Link href="/contatti" className={styles["cta-btn"]}>
             Contattaci ora!
           </Link>
+        </div>
+      </section>
+
+      <section className={styles["analysis-home-section"]}>
+        <div className={`${styles["analysis-home-container"]} container`}>
+          <div>
+            <h2>ANALISI SITO WEB</h2>
+            <p className="text-highlight text-center">
+              Ottieni una valutazione immediata delle performance del tuo sito
+              web.
+            </p>
+          </div>
+          <p className={styles["analysis-home-description"]}>
+            In pochi secondi, grazie alla nostra analisi{" "}
+            <span className="span-highlight">gratuita e professionale</span>, ti
+            forniremo un report dettagliato, indicandoti tutte le problematiche
+            e le criticità che potrebbero allontanare i visitatori facendoti
+            perdere potenziali clienti.
+          </p>
+          <Form type="analysis" />
         </div>
       </section>
 
