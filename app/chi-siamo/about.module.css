@@ -53,16 +53,80 @@
     border-radius: 0 10px 10px 10px
 }
 
-.about-card-container:nth-child(2) .card-text {
-    order: 1;
-}
-
 .about-card-container:nth-child(2) .card-image img {
     border-radius: 10px 0 10px 10px;
 }
 
 .about-card-container:nth-child(2) .card-text {
     border-radius: 0 10px 10px 0;
+}
+
+.about-us-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-us-cta h2 {
+    font-size: clamp(1.5rem, 1.314rem + 0.762vw, 2rem);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    margin: 0;
+}
+
+.about-us-cta p {
+    font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
+    margin: 0;
+}
+
+.about-us-cta a {
+    font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
+    text-align: center;
+    width: min(400px, 100%);
+    background-color: var(--primary-color);
+    padding: clamp(0.5rem, 0.314rem + 0.762vw, 1rem) 2rem;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    transition: all .3s;
+}
+
+.about-us-cta a:hover {
+    background-color: var(--secondary-color);
+}
+
+@keyframes fadeInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about-card-container div:nth-child(1) {
+    animation: fadeInFromLeft 1s;
+}
+
+.about-card-container div:nth-child(2) {
+    animation: fadeInFromRight 1s;
 }
 
 @media (max-width: 992px) {

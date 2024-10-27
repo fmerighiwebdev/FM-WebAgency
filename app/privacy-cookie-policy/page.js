@@ -177,7 +177,7 @@ export default function PrivacyCookiePolicyPage() {
           <h2>Contatti</h2>
           <p>
             Per domande o richieste relative alla presente Privacy e Cookie
-            Policy, è possibile contattarci FM WEB AGENCY tramite email
+            Policy, è possibile contattarci tramite email
             compilando il form presente a questa{" "}
             <Link href="/contatti">pagina</Link> o scrivendo
             all&apos;indirizzo Via III Novembre, 6, Nogaredo (TN), 38060.
