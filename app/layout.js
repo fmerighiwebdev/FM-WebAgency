@@ -8,7 +8,7 @@ import Footer from "@/components/footer/footer";
 import Maintenance from "@/components/maintenance/maintenance";
 
 export const metadata = {
-  title: "FM Web Agency",
+  title: "FM Web Agency - Sviluppo Siti Web e Marketing Digitale",
   description:
     "Accelera la crescita del tuo business con SOLUZIONI WEB SU MISURA che portano risultati concreti."
 };
