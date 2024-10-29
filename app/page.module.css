@@ -55,7 +55,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100dvh;
     gap: 3rem;
     padding-inline: .75rem;
     position: relative;
@@ -351,10 +351,6 @@
 }
 
 @media (max-width: 768px) {
-    .hero-section {
-        min-height: 90vh;
-    }
-
     .hero-description {
         letter-spacing: -.5px;
     }
