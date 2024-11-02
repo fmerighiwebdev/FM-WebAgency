@@ -73,7 +73,7 @@ export default function Home() {
                 </span>
                 , siamo pronti a darti gli strumenti giusti per crescere.
               </p>
-              <Link href="/services" className={styles["section-link"]}>
+              <Link href="/servizi" className={styles["section-link"]}>
                 Scopri i nostri servizi{" "}
                 <Image src={rightArrow} alt="Right Arrow" />
               </Link>
