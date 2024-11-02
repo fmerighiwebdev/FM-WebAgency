@@ -32,7 +32,7 @@ export default function ServicesPage() {
                   <h2>Sito Web</h2>
                 </div>
                 <p className="text-highlight">
-                  Migliora l'immagine del tuo brand con un sito web
+                  Migliora l&apos;immagine del tuo brand con un sito web
                   professionale.
                 </p>
               </div>
