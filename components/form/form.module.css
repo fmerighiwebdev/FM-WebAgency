@@ -109,6 +109,29 @@
     text-decoration: none;
 }
 
+.contacts-form a:hover, .analysis-form a:hover {
+    text-decoration: underline;
+}
+
+.contacts-form select {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 5px;
+    transition: all .3s;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(120, 120, 120);
+}
+
+.contacts-form select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contacts-form select option {
+    color: black;
+}
+
 @media (max-width: 768px) {
     .input-block-double, .input-block-triple {
         flex-direction: column;

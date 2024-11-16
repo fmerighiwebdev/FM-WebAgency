@@ -14,12 +14,23 @@ export default function Form({ type }) {
   const emailRef = useRef(null);
   const phoneRef = useRef(null);
   const messageRef = useRef(null);
+  const interestRef= useRef(null);
   const privacyRef = useRef(false);
   const websiteURLRef = useRef(null);
 
   const [isSending, setIsSending] = useState(false);
   const [isSent, setIsSent] = useState(false);
   const [error, setError] = useState(null);
+
+  const options = [
+    { value: "", text: "Seleziona il servizio di interesse" },
+    { value: "Sito Web", text: "Sito Web" },
+    { value: "Applicazione Web", text: "Applicazione Web" },
+    { value: "eCommerce", text: "eCommerce" },
+    { value: "SEO", text: "SEO" },
+    { value: "Marketing Digitale", text: "Marketing Digitale" },
+    { value: "Altro", text: "Altro" },
+  ];
 
   const router = useRouter();
 
@@ -66,6 +77,7 @@ export default function Form({ type }) {
       company: companyRef.current.value,
       email: emailRef.current.value,
       phone: phoneRef.current.value,
+      interest: interestRef.current.value,
       message: messageRef.current.value,
       privacy: privacyRef.current.checked,
     };
@@ -94,6 +106,7 @@ export default function Form({ type }) {
     companyRef.current.value = "";
     emailRef.current.value = "";
     phoneRef.current.value = "";
+    interestRef.current.value = "";
     messageRef.current.value = "";
     privacyRef.current.checked = false;
   }
@@ -154,7 +167,10 @@ export default function Form({ type }) {
           Telefono *
         </FormInput>
       </div>
-      <FormInput name="message" ref={messageRef}>
+      <FormInput name="interest" ref={interestRef} select options={options}>
+        A cosa sei interessato? *
+      </FormInput>
+      <FormInput name="message" ref={messageRef} textarea>
         Note aggiuntive *
       </FormInput>
       <div className={styles["privacy-input-block"]}>

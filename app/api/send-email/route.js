@@ -13,6 +13,10 @@ export async function POST(request) {
     return NextResponse.json({ message: "Tutti i campi obbligatori vanno compilati.", status: "error" });
   }
 
+  if (!data.interest) {
+    return NextResponse.json({ message: "Devi selezionare un interesse.", status: "error" });
+  }
+
   if (!data.privacy) {
     return NextResponse.json({ message: "Devi accettare i termini e le condizioni.", status: "error" });
   }
@@ -37,6 +41,7 @@ export async function POST(request) {
                 <p><strong>Azienda:</strong> ${data.company}</p>
                 <p><strong>Email:</strong> ${data.email}</p>
                 <p><strong>Telefono:</strong> ${data.phone}</p>
+                <p><strong>Interesse:</strong> ${data.interest}</p>
                 <p><strong>Messaggio:</strong> ${data.message}</p>
             `,
     });
