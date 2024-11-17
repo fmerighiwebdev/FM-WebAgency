@@ -1,7 +1,62 @@
-.maintenance-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+.portfolio-page {
+    padding: 11rem 0 5rem 0;
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.project {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.project p, .project h2 {
+    margin: 0;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default (desktop) */
+    gap: 2rem;
+}
+
+.project-footer a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.project-footer a:hover {
+    box-shadow: 0 5px 5px rgba(107, 192, 188, 0.5);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 992px) { /* Tablet */
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .projects {
+        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+    }
 }
