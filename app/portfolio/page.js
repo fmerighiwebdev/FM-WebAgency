@@ -1,67 +1,75 @@
 import styles from "./portfolio.module.css";
 
-import alTeatro1 from "../../assets/al-teatro.webp";
-import trePini1 from "../../assets/tre-pini.webp";
-import esc1 from "../../assets/esc.webp";
+import locationIcon from "../../assets/location.svg";
+
+import { projects } from "../../utils/projects";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function PortfolioPage() {
-  const projects = {
-    "ristorante-al-teatro": {
-      title: 'Ristorante Pizzeria "Al Teatro"',
-      address: "Via Angelo Anelli, 40A - Desenzano del Garda (BS)",
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-      longDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Sed ac felis metus. Etiam non erat tortor. Phasellus bibendum fringilla libero, sit amet accumsan elit fringilla nec. Donec sit amet tincidunt libero. Cras malesuada nulla sed quam volutpat condimentum. Sed ac ligula sit amet mi scelerisque imperdiet. Praesent ut magna non nulla convallis venenatis.",
-      images: [alTeatro1],
-      url: "https://www.ristorantealteatro.it",
-    },
-    "ristorante-3-pini": {
-      title: 'Ristorante Pizzeria "3 Pini"',
-      address: "Via Stazione Mori, 14 - Rovereto (TN)",
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-      longDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-      images: [trePini1],
-      url: "https://www.ristorante3pini.it",
-    },
-    "esc-corporation": {
-      title: "ESC CORPORATION",
-      address: "Via Don Lorenzo Guetti, 9 - Trento (TN)",
-      shortDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-      longDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque.",
-      images: [esc1],
-      url: "/portfolio/project-3",
-    },
-  };
-
   return (
     <main className={styles["portfolio-page"]}>
       <div className="container">
-        <h1>Scopri i nostri progetti</h1>
-        <div className={styles["projects"]}>
+        <div className="d-flex flex-column flex-lg-row align-items-center gap-0 gap-lg-2">
+          <h1 className={styles["portfolio-heading"]}>IL NOSTRO PORTFOLIO</h1>
+          <p className={styles["portfolio-subheading"]}>
+            Nel nostro portfolio troverai una selezione dei progetti che
+            raccontano la passione e l&apos;attenzione che mettiamo in ogni
+            dettaglio. <br></br>
+            <br></br>
+            Ogni sito è pensato per unire design accattivante, funzionalità
+            avanzate e un&apos;esperienza utente fluida, adattandosi
+            perfettamente a ogni dispositivo. <br></br>
+            <br></br> Che si tratti di piccole realtà o grandi aziende, creiamo
+            soluzioni su misura che riflettono l&apos;identità unica di ogni
+            brand.
+          </p>
+        </div>
+        <div className={styles.projects}>
           {Object.keys(projects).map((key) => {
             const project = projects[key];
             const projectLink = `/portfolio/${key}`;
             return (
-              <div key={key} className={styles["project"]}>
+              <div key={key} className={styles.project}>
                 <div className={styles["image-container"]}>
                   <Image src={project.images[0]} alt={project.title} />
                 </div>
                 <div className="p-3 d-flex flex-column gap-5">
-                  <div className={`${styles["project-header"]} d-flex flex-column gap-2`}>
+                  <div
+                    className={`${styles["project-header"]} d-flex flex-column gap-3`}
+                  >
                     <h2>{project.title}</h2>
-                    <p>{project.address}</p>
+                    <div className="d-flex align-start gap-2">
+                      <Image
+                        src={locationIcon}
+                        alt="Location"
+                        width={20}
+                        height={20}
+                      />
+                      <div className={styles.address}>
+                        <p>{project.address}</p>
+                        <p>{project.city}</p>
+                      </div>
+                    </div>
+                    <div className="d-flex align-items-center gap-2">
+                      <Image
+                        src={project.serviceIcon}
+                        alt="Service Icon"
+                        width={20}
+                        height={20}
+                      />
+                      <div className={styles.service}>
+                        <p>{project.serviceText}</p>
+                      </div>
+                    </div>
                     <p>{project.shortDescription}</p>
                   </div>
                   <div className={`${styles["project-footer"]} d-flex gap-2`}>
-                    <a href={project.url}>Visita il sito web</a>
-                    <a href={projectLink}>Scopri di più</a>
+                    <Link href={project.url} target="_blank">
+                      Visita il sito web
+                    </Link>
+                    <Link href={projectLink}>Scopri di più</Link>
                   </div>
                 </div>
               </div>

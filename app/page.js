@@ -36,16 +36,6 @@ export default function Home() {
           className={`${styles["light-bubble"]} ${styles["big"]}`}
           alt="Background Bubble"
         />
-        {/* <Image
-          src={darkBubble}
-          className={`${styles["dark-bubble"]}`}
-          alt="Background Bubble"
-        />
-        <Image
-          src={lightBubble}
-          className={`${styles["light-bubble"]} ${styles["medium"]}`}
-          alt="Background Bubble"
-        /> */}
       </section>
 
       <section className={styles["services-home-section"]} id="servizi">

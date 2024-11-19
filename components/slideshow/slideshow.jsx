@@ -19,17 +19,17 @@ export default function Slideshow() {
     {
       src: esc,
       captionTitle: "ESC Corporation",
-      captionText: "eCommerce, Sito Web",
+      captionText: "eCommerce",
     },
     {
       src: trePini,
       captionTitle: "Tre Pini",
-      captionText: "Sito Web, Copywriting",
+      captionText: "Sito Web",
     },
     {
       src: alTeatro,
       captionTitle: "Al Teatro",
-      captionText: "Sito Web, Copywriting, Social Media Marketing",
+      captionText: "Sito Web",
     },
   ];
 

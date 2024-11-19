@@ -4,7 +4,8 @@
 
 .image-container {
     width: 100%;
-    height: 200px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .image-container img {
@@ -12,6 +13,11 @@
     height: 100%;
     object-fit: cover;
     border-radius: 0.5rem 0.5rem 0 0;
+    transition: all .3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
 }
 
 .project {
@@ -20,22 +26,52 @@
     background-color: var(--white);
     border-radius: 0.5rem;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.portfolio-heading {
+    color: var(--secondary-color);
+    font-size: clamp(2rem, 1.629rem + 1.524vw, 3rem);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    margin: 0;
+}
+
+.portfolio-subheading {
+    font-size: clamp(1rem, 0.907rem + 0.381vw, 1.25rem);
+    margin-block: 2rem 4rem;
 }
 
 .project p, .project h2 {
     margin: 0;
 }
 
+.project h2 {
+    font-weight: var(--fw-600);
+}
+
 .projects {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns by default (desktop) */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+}
+
+.address p {
+    color: grey;
+}
+
+.service p {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    font-size: 1.2rem;
 }
 
 .project-footer a {
     display: block;
     width: 100%;
-    padding: 1rem;
+    padding: .75rem;
     text-align: center;
     border: 1px solid var(--primary-color);
     text-decoration: none;
@@ -45,18 +81,29 @@
 }
 
 .project-footer a:hover {
-    box-shadow: 0 5px 5px rgba(107, 192, 188, 0.5);
+    box-shadow: 0 5px 5px rgba(107, 192, 188, 0.3);
     transform: translateY(-5px);
 }
 
-@media (max-width: 992px) { /* Tablet */
+.project-hero {
+    width: 100vw;
+    height: 50vh;
+}
+
+.project-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 992px) {
     .projects {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 768px) { /* Mobile */
+@media (max-width: 768px) {
     .projects {
-        grid-template-columns: repeat(1, 1fr); /* 2 columns */
+        grid-template-columns: repeat(1, 1fr);
     }
 }
