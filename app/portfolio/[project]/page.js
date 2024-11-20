@@ -1,6 +1,7 @@
 "use client"
 
 import styles from "../portfolio.module.css";
+import fmLogo from "../../../assets/fm-logo.svg";
 
 import { projects } from "../../../utils/projects";
 
@@ -14,9 +15,8 @@ export default function ProjectPage() {
 
     return (
         <main className={styles["project-page"]}>
-            <section className={styles["project-hero"]}>
-                <Image src={projectData.images[0]} alt={projectData.title} />
-            </section>
+            <Image src={fmLogo} alt="FM LOGO" />
+            <h1>IN AGGIORNAMENTO...</h1>
         </main>
     );
 }

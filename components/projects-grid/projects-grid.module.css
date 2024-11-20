@@ -1,0 +1,80 @@
+.image-container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    transition: all .3s;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.project {
+    width: 100%;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.project p, .project h2 {
+    margin: 0;
+}
+
+.project h2 {
+    font-weight: var(--fw-600);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.address p {
+    color: grey;
+}
+
+.service p {
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: var(--fw-600);
+    font-size: 1.2rem;
+}
+
+.project-footer a {
+    display: block;
+    width: 100%;
+    padding: .75rem;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    color: var(--primary-color);
+    border-radius: 10px;
+    transition: all .3s;
+}
+
+.project-footer a:hover {
+    box-shadow: 0 5px 5px rgba(107, 192, 188, 0.3);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 992px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
