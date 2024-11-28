@@ -8,9 +8,9 @@ import Footer from "@/components/footer/footer";
 import Maintenance from "@/components/maintenance/maintenance";
 
 export const metadata = {
-  title: "FM Web Agency - Sviluppo Siti Web e Marketing Digitale",
+  title: "FM Web Agency - Sviluppo Siti Web e Marketing Digitale a Rovereto",
   description:
-    "Accelera la crescita del tuo business con SOLUZIONI WEB SU MISURA che portano risultati concreti."
+    "FM Web Agency a Rovereto: realizzazione Siti Web, eCommerce e strategie di Marketing Digitale. Soluzioni personalizzate per Startup e Aziende che vogliono crescere online.",
 };
 
 const isMaintenance = false;
