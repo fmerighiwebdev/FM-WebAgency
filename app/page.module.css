@@ -239,7 +239,7 @@
     justify-content: center;
 }
 
-.partner-card:first-child img {
+.partner-card:first-child img, .partner-card:nth-child(2) img {
     width: clamp(9.375rem, 9.143rem + 0.952vw, 10rem);
 }
 

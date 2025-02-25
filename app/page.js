@@ -10,8 +10,7 @@ import emergeLogo from "@/assets/logo-emergelabs.webp";
 import hostingerLogo from "@/assets/hostinger-logo.svg";
 import vercelLogo from "@/assets/logo-vercel.svg";
 import cookieLogo from "@/assets/cookieyes-logo.svg";
-import alTeatro from "@/assets/al-teatro.webp";
-import trePini from "@/assets/tre-pini.webp";
+import eyeAbleLogo from "@/assets/eye-able-logo.svg";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -200,6 +199,13 @@ export default function Home() {
             >
               <Link href="https://www.emergelabs.it">
                 <Image src={emergeLogo} alt="EmergeLabs Logo" />
+              </Link>
+            </div>
+            <div
+              className={`${styles["partner-card"]} col-12 col-sm-6 col-lg-3`}
+            >
+              <Link href="https://eye-able.com/it">
+                <Image src={eyeAbleLogo} alt="Eye-Able Logo" />
               </Link>
             </div>
             <div
