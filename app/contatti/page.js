@@ -1,6 +1,11 @@
 import styles from "./contacts.module.css";
 import Form from "@/components/form/form";
 
+export const metadata = {
+    title: "Contatti - FM Web Agency",
+    description: "Hai un progetto in mente? Contattaci per trasformare le tue idee in realtà. Compila il modulo o contattaci direttamente via email o telefono.",
+};
+
 export default function ContactsPage() {
     return (
         <main className={`${styles["contacts-page"]}`}>

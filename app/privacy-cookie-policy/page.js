@@ -1,6 +1,12 @@
 import Link from "next/link";
 import styles from "./privacy.module.css";
 
+export const metadata = {
+  title: "Privacy e Cookie Policy - FM Web Agency",
+  description:
+    "Informativa sulla privacy e cookie policy di FM Web Agency. Informazioni sui dati raccolti, finalità del trattamento e diritti degli utenti.",
+};
+
 export default function PrivacyCookiePolicyPage() {
   return (
     <main className={styles["privacy-page"]}>

@@ -6,6 +6,12 @@ import aboutUs2 from "../../assets/about-us-2.webp";
 import aboutUs3 from "../../assets/about-us-3.webp";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Chi Siamo - FM Web Agency",
+  description:
+    "FM Web Agency è il partner digitale che trasforma le idee in realtà. Scopri la nostra visione, il team e il nostro impegno nel creare soluzioni innovative per il tuo successo online.",
+};
+
 export default function AboutPage() {
   return (
     <main className={styles["about-us-page"]}>

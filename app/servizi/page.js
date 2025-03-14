@@ -6,6 +6,12 @@ import cartIcon from "@/assets/cart.svg";
 import upTrendIcon from "@/assets/up-trend.svg";
 import Image from "next/image";
 
+export const metadata = {
+  title: "I Nostri Servizi - FM Web Agency",
+  description:
+    "Scopri i servizi digitali di FM Web Agency: Sviluppo Siti Web, App, eCommerce e Digital Marketing. Soluzioni su misura per far crescere il tuo business online.",
+};
+
 export default function ServicesPage() {
   return (
     <main className={styles["services-page"]}>

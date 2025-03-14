@@ -8,6 +8,7 @@ import styles from "./slideshow.module.css";
 import alTeatro from "../../assets/al-teatro.webp";
 import trePini from "../../assets/tre-pini.webp";
 import esc from "../../assets/esc.webp";
+import cmg from "../../assets/cmg.webp";
 import leftArrow from "../../assets/left-arr.svg";
 import rightArrow from "../../assets/right-arr.svg";
 
@@ -16,6 +17,11 @@ export default function Slideshow() {
   const [direction, setDirection] = useState(1);
 
   const imagesInfo = [
+    {
+      src: cmg,
+      captionTitle: "CMG Baldessarelli",
+      captionText: "Sito Web"
+    },
     {
       src: esc,
       captionTitle: "ESC Corporation",

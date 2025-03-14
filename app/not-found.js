@@ -2,6 +2,11 @@ import styles from "./page.module.css";
 
 import Link from "next/link";
 
+export const metadata = {
+    title: "Pagina Non Trovata - FM Web Agency",
+    description: "La pagina che stai cercando non esiste o è stata spostata." 
+}
+
 export default function NotFoundPage() {
     return (
         <main className={styles["not-found-page"]}>
