@@ -4,6 +4,9 @@ import styles from "./about.module.css";
 import aboutUs1 from "../../assets/about-us-1.webp";
 import aboutUs2 from "../../assets/about-us-2.webp";
 import aboutUs3 from "../../assets/about-us-3.webp";
+import signature from "../../assets/signature.svg";
+import profilePicture from "../../assets/francesco.webp";
+
 import Link from "next/link";
 
 export const metadata = {
@@ -16,6 +19,7 @@ export default function AboutPage() {
   return (
     <main className={styles["about-us-page"]}>
       <div className="container">
+        <h1>CONOSCIAMOCI MEGLIO</h1>
         <section>
           <div className={styles["about-card-container"]}>
             <div className={styles["card-text"]}>
@@ -63,6 +67,21 @@ export default function AboutPage() {
             </div>
             <div className={styles["card-image"]}>
               <Image src={aboutUs2} alt="Chi siamo" />
+            </div>
+          </div>
+          <div className={styles["ceo-presentation"]}>
+            <div className={styles["ceo-content"]}>
+              <h2>FRANCESCO MERIGHI</h2>
+              <p>Founder & CEO of FM Web Agency</p>
+              <p>
+                Esperienza pluriennale nello sviluppo web e nel digital marketing,
+                con un approccio strategico per massimizzare visibilità e
+                performance online.
+              </p>
+              <Image src={signature} alt="Firma Francesco Merighi" />
+            </div>
+            <div className={styles["ceo-image"]}>
+              <Image src={profilePicture} alt="Francesco Merighi - Sviluppatore Web e Software" />
             </div>
           </div>
           <div className={styles["about-us-cta"]}>

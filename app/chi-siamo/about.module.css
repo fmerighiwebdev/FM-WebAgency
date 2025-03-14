@@ -2,6 +2,13 @@
     padding: 11rem 0 4.5rem 0;
 }
 
+.about-us-page h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: var(--fw-700);
+    color: var(--secondary-color)
+}
+
 .about-us-page section {
     width: min(1000px, 100%);
     margin: 0 auto;
@@ -38,7 +45,7 @@
 .card-text h2 {
     font-size: clamp(1.5rem, 1.314rem + 0.762vw, 2rem);
     text-transform: uppercase;
-    font-weight: var(--fw-700);
+    font-weight: var(--fw-600);
 }
 
 .card-image {
@@ -97,6 +104,51 @@
     background-color: var(--secondary-color);
 }
 
+.ceo-presentation {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.ceo-content h2 {
+    font-size: clamp(1.5rem, 1.314rem + 0.762vw, 2rem);
+    text-transform: uppercase;
+    font-weight: var(--fw-700);
+    margin: 0;
+}
+
+.ceo-content p:nth-child(2) {
+    margin: 0;
+    font-style: italic;
+    color: gray;
+}
+
+.ceo-content p:nth-child(3) {
+    margin: 1.5rem 0;
+}
+
+.ceo-content img {
+    width: clamp(12.5rem, 10.179rem + 9.524vw, 18.75rem);
+    height: auto;
+}
+
+.ceo-presentation .ceo-content, .ceo-presentation .ceo-image {
+    flex: 1;
+}
+
+.ceo-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ceo-image img {
+    width: clamp(15.625rem, 14.464rem + 4.762vw, 18.75rem);
+    height: clamp(15.625rem, 14.464rem + 4.762vw, 18.75rem);
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 @keyframes fadeInFromRight {
     from {
         opacity: 0;
@@ -153,5 +205,10 @@
 
     .about-card-container:nth-child(2) .card-image img {
         border-radius: 10px 10px 0 0;
+    }
+
+    .ceo-presentation {
+        flex-direction: column;
+        gap: 2rem;
     }
 }
